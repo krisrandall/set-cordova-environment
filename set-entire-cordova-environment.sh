@@ -1,6 +1,8 @@
 #!/bin/bash
 
-. ./set-entire-cordova-environment.config.sh 
+cd "$(dirname "$0")"
+
+eval $(./set-entire-cordova-environment.config.sh)
 
 
 echo 
@@ -11,6 +13,7 @@ echo " node $MY_NODE_VER"
 echo " cordova $MY_CORDOVA_VER"
 echo " cordova iOS $MY_CORDOVA_IOS_VER"
 echo " cordova Android $MY_CORDOVA_ANDROID_VER"
+echo " app dir $MY_CORDOVA_APP_DIR"
 echo
 echo "Do you want that? (type 'no' to exit)"
 read proceed
@@ -38,6 +41,6 @@ cordova platform add android@$MY_CORDOVA_ANDROID_VER
 echo 
 echo "All done!"
 echo
-echo "Consider having a script to add all your required plugins run now"
-echo "You can clear out your plugins using 'cordova-check-plugins --remove-all' which can be installed using 'npm install -g cordova-check-plugins'"
-echo
+echo "Use '../scripts/add-cordova-plugins.sh' to setup all the correct plugins"
+echo "Use 'cordova-icon' and 'cordova-splash' to regenerate the icons and splash pages"
+echo "Use '../singlepageapp/build' to build the app"
