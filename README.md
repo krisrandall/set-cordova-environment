@@ -13,5 +13,5 @@ I hope this is useful to you too.
 
 Requires :
  * NPM
- * [NVM](https://github.com/creationix/nvm)
+ * [n](https://github.com/tj/n)
  
