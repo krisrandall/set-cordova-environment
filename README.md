@@ -11,4 +11,7 @@ You may also want to create a script to remove and add your plugins, this script
 
 I hope this is useful to you too.
 
-
+Requires :
+ * NPM
+ * [NVM](https://github.com/creationix/nvm)
+ 
